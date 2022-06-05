@@ -57,9 +57,9 @@ check_list(Easplist, output_file = "ea-checklist", exclude = "family",
 library(taxlist)
 library(vegTemplates)
 
-check_list(Easplist, output_file = "docs/docs/ea-checklist", exclude = "family",
+check_list(Easplist, output_file = "pkgdown/assets/ea-checklist", exclude = "family",
     prefix = c(family = "# "), output = "html_document")
 ```
 
 Check the output
-[here](https://kamapu.github.io/vegTemplates/docs/ea-checklist.html).
+[here](ea-checklist.html).
