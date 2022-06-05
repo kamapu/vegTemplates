@@ -30,7 +30,7 @@ Luebert (2018)](https://doi.org/10.3897/bdj.6.e23635).
 
 Next to it, you may need experience working with
 [`rmarkdown`](https://rmarkdown.rstudio.com/) and perhaps
-<span class="latex">L<sup>A</sup>T<sub>E</sub>X</span>.
+[LaTeX](https://latex.org/) and [`knitr`](https://yihui.org/knitr/), as well.
 They will be here implemented by the package
 [`yamlme`](https://kamapu.github.io/rpkg/yamlme/).
 
@@ -49,9 +49,17 @@ HTML document instead of the default PDF.
 library(taxlist)
 library(vegTemplates)
 
-check_list(Easplist, output_file, exclude = "family", prefix = c(family = "# "),
+check_list(Easplist, output_file = "ea-checklist", exclude = "family", prefix = c(family = "# "),
     output = "html_document")
 ```
 
-Check the output here.
+```{r echo = FALSE, message = FALSE, results = "hide"}
+library(taxlist)
+library(vegTemplates)
 
+check_list(Easplist, output_file = "docs/docs/ea-checklist", exclude = "family", prefix = c(family = "# "),
+    output = "html_document")
+```
+
+Check the output
+[here](docs/ea-checklist.html).
