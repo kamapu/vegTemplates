@@ -30,13 +30,10 @@ well. They will be here implemented by the package
 
 ## Examples
 
+### Taxonomic checklist
+
 Here an automatic checklist using the example data set released in the
-package `taxlist` (called **Easplist**). With `'exclude = "family"'` we
-prevent family names to be formatted in italics. With the option
-`'prefix = c(family = "# ")'` we will add a markdown command to set
-families as sections in the document. With the option
-`'output = "html_document"'` we set the output as a HTML document
-instead of the default PDF.
+package `taxlist` (called **Easplist**).
 
 ``` r
 library(taxlist)
@@ -46,5 +43,10 @@ check_list(Easplist, output_file = "ea-checklist", exclude = "family",
     prefix = c(family = "# "), output = "html_document")
 ```
 
-Check the output
-[here](https://kamapu.github.io/vegTemplates/docs/ea-checklist.html).
+With the option `'exclude = "family"'` you prevent family names to be
+formatted in italics. With the option `'prefix = c(family = "# ")'` you
+add a markdown command to set families as sections in the document. With
+the option `'output = "html_document"'` we set the output as a HTML
+document instead of the default PDF.
+
+Check the output [here](ea-checklist.html).
