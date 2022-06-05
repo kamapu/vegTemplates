@@ -28,10 +28,6 @@ jobs:
         with:
           use-public-rspm: true
 
-      - name: Install libxml2 on Ubuntu
-        if: runner.os == 'Linux'
-        run: sudo apt-get update -y && sudo apt-get install -y libxml2-dev
-
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: any::pkgdown, local::.
