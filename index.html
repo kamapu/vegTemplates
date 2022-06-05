@@ -82,14 +82,19 @@
 <div class="section level2">
 <h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
 </h2>
-<p>Here an automatic checklist using the example data set released in the package <code>taxlist</code> (called <strong>Easplist</strong>). With <code>'exclude = "family"'</code> we prevent family names to be formatted in italics. With the option <code>'prefix = c(family = "# ")'</code> we will add a markdown command to set families as sections in the document. With the option <code>'output = "html_document"'</code> we set the output as a HTML document instead of the default PDF.</p>
+<div class="section level3">
+<h3 id="taxonomic-checklist">Taxonomic checklist<a class="anchor" aria-label="anchor" href="#taxonomic-checklist"></a>
+</h3>
+<p>Here an automatic checklist using the example data set released in the package <code>taxlist</code> (called <strong>Easplist</strong>).</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://cran.r-project.org/package=taxlist" class="external-link">taxlist</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/kamapu/vegTemplates" class="external-link">vegTemplates</a></span><span class="op">)</span>
 
 <span class="fu"><a href="reference/check_list.html">check_list</a></span><span class="op">(</span><span class="va">Easplist</span>, output_file <span class="op">=</span> <span class="st">"ea-checklist"</span>, exclude <span class="op">=</span> <span class="st">"family"</span>,
     prefix <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>family <span class="op">=</span> <span class="st">"# "</span><span class="op">)</span>, output <span class="op">=</span> <span class="st">"html_document"</span><span class="op">)</span></code></pre></div>
-<p>Check the output <a href="https://kamapu.github.io/vegTemplates/docs/ea-checklist.html">here</a>.</p>
+<p>With the option <code>'exclude = "family"'</code> you prevent family names to be formatted in italics. With the option <code>'prefix = c(family = "# ")'</code> you add a markdown command to set families as sections in the document. With the option <code>'output = "html_document"'</code> we set the output as a HTML document instead of the default PDF.</p>
+<p>Check the output <a href="ea-checklist.html">here</a>.</p>
+</div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
