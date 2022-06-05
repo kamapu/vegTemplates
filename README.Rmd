@@ -49,17 +49,17 @@ HTML document instead of the default PDF.
 library(taxlist)
 library(vegTemplates)
 
-check_list(Easplist, output_file = "ea-checklist", exclude = "family", prefix = c(family = "# "),
-    output = "html_document")
+check_list(Easplist, output_file = "ea-checklist", exclude = "family",
+    prefix = c(family = "# "), output = "html_document")
 ```
 
 ```{r echo = FALSE, message = FALSE, results = "hide"}
 library(taxlist)
 library(vegTemplates)
 
-check_list(Easplist, output_file = "docs/docs/ea-checklist", exclude = "family", prefix = c(family = "# "),
-    output = "html_document")
+check_list(Easplist, output_file = "docs/docs/ea-checklist", exclude = "family",
+    prefix = c(family = "# "), output = "html_document")
 ```
 
 Check the output
-[here](docs/ea-checklist.html).
+[here](https://kamapu.github.io/vegTemplates/docs/ea-checklist.html).

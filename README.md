@@ -23,9 +23,9 @@ you can take a look into the article written by [Alvarez & Luebert
 (2018)](https://doi.org/10.3897/bdj.6.e23635).
 
 Next to it, you may need experience working with
-[`rmarkdown`](https://rmarkdown.rstudio.com/) and perhaps <span
-class="latex">L<sup>A</sup>T<sub>E</sub>X</span>. They will be here
-implemented by the package
+[`rmarkdown`](https://rmarkdown.rstudio.com/) and perhaps
+[LaTeX](https://latex.org/) and [`knitr`](https://yihui.org/knitr/), as
+well. They will be here implemented by the package
 [`yamlme`](https://kamapu.github.io/rpkg/yamlme/).
 
 ## Examples
@@ -42,8 +42,9 @@ instead of the default PDF.
 library(taxlist)
 library(vegTemplates)
 
-check_list(Easplist, output_file = "ea-checklist", exclude = "family", prefix = c(family = "# "),
-    output = "html_document")
+check_list(Easplist, output_file = "ea-checklist", exclude = "family",
+    prefix = c(family = "# "), output = "html_document")
 ```
 
-Check the output [here](docs/ea-checklist.html).
+Check the output
+[here](https://kamapu.github.io/vegTemplates/docs/ea-checklist.html).
