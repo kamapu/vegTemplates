@@ -19,6 +19,7 @@ Description:
 LazyData: true
 Roxygen: list(markdown = TRUE)
 License: file LICENSE
-URL: https://github.com/kamapu/vegTemplates
+URL: https://github.com/kamapu/vegTemplates,
+    https://kamapu.github.io/vegTemplates/
 BugReports: https://github.com/kamapu/vegTemplates/issues
 RoxygenNote: 7.2.0

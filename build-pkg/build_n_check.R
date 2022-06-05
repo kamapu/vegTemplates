@@ -25,3 +25,6 @@ check_built(path = pkg_loc)
 
 # write manual
 build_manual(path = "build-pkg")
+
+# install the package
+install()
