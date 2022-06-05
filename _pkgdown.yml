@@ -1,4 +1,5 @@
 url: https://kamapu.github.io/vegTemplates/
 template:
   bootstrap: 5
+  bootswatch: minty
 
