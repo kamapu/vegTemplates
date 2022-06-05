@@ -1,0 +1,22 @@
+---
+output:
+  github_document:
+    html_preview: false
+always_allow_html: true
+---
+
+# vegTemplates
+
+A collection of automatic documents using the package
+[`yamlme`](https://github.com/kamapu/yamlme/).
+
+## Installation
+
+To install the development version, use the package
+[`remotes`](https://remotes.r-lib.org/):
+
+```{r eval=FALSE}
+library(remotes)
+install_github("kamapu/vegTemplates", "devel")
+```
+
