@@ -1,17 +1,25 @@
-Package: <package name>
-Version: <package version>
+Package: vegTemplates
+Version: 0.0.1.9001
 Encoding: UTF-8
-Title: <edit>
+Title: Templates for taxlist and vegtable objects
 Authors@R:
 	person("Miguel", "Alvarez", email="kamapu78@gmail.com",
 		role=c("aut","cre"), comment=c(ORCID="0000-0003-1500-1834"))
 Depends:
 	R(>= 4.0.0)
 Imports:
+    taxlist,
+    vegtable,
+    yamlme
 Suggests:
-Description: <edit>
+SystemRequirements: pandoc (>= 1.14) - http://pandoc.org
+Description:
+    A collection of templates for documents generated from taxlist and vegtable
+    objects using the packages knitr, rmarkdown, and yamlme.
 LazyData: true
 Roxygen: list(markdown = TRUE)
 License: file LICENSE
-URL: https://github.com/kamapu/<edit>
-BugReports: https://github.com/kamapu/<edit>/issues
+URL: https://github.com/kamapu/vegTemplates,
+    https://kamapu.github.io/vegTemplates/
+BugReports: https://github.com/kamapu/vegTemplates/issues
+RoxygenNote: 7.2.0

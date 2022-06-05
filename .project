@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>template-r-package</name>
+	<name>vegTemplates</name>
 	<comment>
-		A GitHub template for an R package. Edit this description an the name.
+		An R package with a collection of templates for taxlist and vegtable.
 	</comment>
 	<projects>
 	</projects>
