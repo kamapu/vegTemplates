@@ -2,8 +2,8 @@ pandoc: 2.14.2
 pkgdown: 2.0.3
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-06-05T12:04Z
+last_built: 2022-06-05T12:16Z
 urls:
-  reference: https://kamapu.github.io/vegTemplates/reference
-  article: https://kamapu.github.io/vegTemplates/articles
+  reference: https://kamapu.github.io/rpkg/vegTemplates/reference
+  article: https://kamapu.github.io/rpkg/vegTemplates/articles
 

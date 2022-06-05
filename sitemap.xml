@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kamapu.github.io/vegTemplates/404.html</loc>
+    <loc>https://kamapu.github.io/rpkg/vegTemplates/404.html</loc>
   </url>
   <url>
-    <loc>https://kamapu.github.io/vegTemplates/LICENSE-text.html</loc>
+    <loc>https://kamapu.github.io/rpkg/vegTemplates/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://kamapu.github.io/vegTemplates/authors.html</loc>
+    <loc>https://kamapu.github.io/rpkg/vegTemplates/authors.html</loc>
   </url>
   <url>
-    <loc>https://kamapu.github.io/vegTemplates/index.html</loc>
+    <loc>https://kamapu.github.io/rpkg/vegTemplates/index.html</loc>
   </url>
   <url>
-    <loc>https://kamapu.github.io/vegTemplates/reference/check_list.html</loc>
+    <loc>https://kamapu.github.io/rpkg/vegTemplates/reference/check_list.html</loc>
   </url>
   <url>
-    <loc>https://kamapu.github.io/vegTemplates/reference/index.html</loc>
+    <loc>https://kamapu.github.io/rpkg/vegTemplates/reference/index.html</loc>
   </url>
 </urlset>
