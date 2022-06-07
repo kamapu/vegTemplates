@@ -45,24 +45,27 @@ Here an automatic checklist using the example data set released in the package
 library(taxlist)
 library(vegTemplates)
 
-check_list(Easplist, output_file = "ea-checklist", exclude = "family",
-    prefix = c(family = "# "), output = "html_document")
+checklist(Easplist, output_file = "ea-checklist", exclude = "family",
+    prefix = c(family = "# "), output = "html_document", alphabetic = TRUE)
 ```
 
 ```{r echo = FALSE, message = FALSE, results = "hide"}
 library(taxlist)
 library(vegTemplates)
 
-check_list(Easplist, output_file = "pkgdown/assets/ea-checklist", exclude = "family",
-    prefix = c(family = "# "), output = "html_document")
+checklist(Easplist, output_file = "pkgdown/assets/ea-checklist",
+    exclude = "family",
+    prefix = c(family = "# "), output = "html_document", alphabetic = TRUE)
 ```
 
 With the option `'exclude = "family"'` you prevent family names to be
 formatted in italics.
-With the option `'prefix = c(family = "# ")'` you add a markdown command
+With `'prefix = c(family = "# ")'` you add a markdown command
 to set families as sections in the document.
-With the option `'output = "html_document"'` we set the output as a HTML
+The option `'output = "html_document"'` sets the output as a HTML
 document instead of the default PDF.
+Finally, `'alphabetic = TRUE'` does an alphabetic sorting by taxon usage
+names.
 
 Check the output
 [here](ea-checklist.html).

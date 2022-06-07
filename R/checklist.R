@@ -1,4 +1,4 @@
-#' @name check_list
+#' @name checklist
 #'
 #' @title Taxonomic Check-List
 #'
@@ -20,6 +20,8 @@
 #'     which will be used as prefix.
 #' @param suffix The same as `prefix` but it will be placed at the end of the
 #'     line.
+#' @param print_args A list with elements named after parameters (arguents) of
+#'     the function [print_name()].
 #' @param rmd_args A list with elements named after parameters (arguments) of
 #'     the function [write_rmd()].
 #' @param render_args A list with elements named after parameters (arguments) of
@@ -30,15 +32,15 @@
 #' @param output_file Name of the rendered otuput file. It will be passed to
 #'     [write_rmd()].
 #' @param ... Further arguments. In taxlist-method they will be passed to the
-#'     function [print_name()].
+#'     function [indented_list()].
 #'
-#' @rdname check_list
+#' @rdname checklist
 #' @export
-check_list <- function(object, ...) {
-  UseMethod("check_list", object)
+checklist <- function(object, ...) {
+  UseMethod("checklist", object)
 }
 
-#' @rdname check_list
+#' @rdname checklist
 #' @examples
 #' \dontrun{
 #' library(taxlist)
@@ -49,40 +51,46 @@ check_list <- function(object, ...) {
 #' )
 #'
 #' ## Simple checklist
-#' check_list(Piperaceae, output_file = "piperaceae", exclude = "family")
+#' checklist(Piperaceae, output_file = "piperaceae", exclude = "family")
 #'
 #' ## Families as sections in document
-#' check_list(Piperaceae,
+#' checklist(Piperaceae,
 #'   output_file = "piperaceae2", exclude = "family",
 #'   prefix = c(family = "# ")
 #' )
 #'
 #' ## Families as sections and small captions for the whole taxonomic list
-#' check_list(Easplist,
+#' checklist(Easplist,
 #'   output_file = "ea-splist", exclude = "family",
 #'   prefix = c(family = "# \\sc{"), suffix = c(family = "}")
 #' )
 #' }
 #'
-#' @aliases check_list,taxlist-method
-#' @method check_list taxlist
+#' @aliases checklist,taxlist-method
+#' @method checklist taxlist
 #' @export
-check_list.taxlist <- function(object, exclude, indent = "&nbsp;", prefix = "",
-                               suffix = "",
-                               rmd_args = list("header-includes" =
-                                       "- \\setlength{\\parskip}{0pt}"),
-                               render_args = list(),
-                               title = "Taxonomic Checklist", output =
-                                   "pdf_document",
-                               output_file = tempfile(), ...) {
-  sp_names <- indented_list(object, print = FALSE)
+checklist.taxlist <- function(object, exclude, indent = "&nbsp;", prefix = "",
+                              suffix = "",
+                              print_args = list(),
+                              rmd_args = list(
+                                "header-includes" =
+                                  "- \\setlength{\\parskip}{0pt}"
+                              ),
+                              render_args = list(),
+                              title = "Taxonomic Checklist", output =
+                                "pdf_document",
+                              output_file = tempfile(), ...) {
+  sp_names <- indented_list(object, print = FALSE, ...)
   if (!missing(exclude)) {
     idx <- !paste(sp_names$Level) %in% exclude
   } else {
     idx <- rep(TRUE, nrow(sp_names))
   }
   sp_names$formatted_name <- with(sp_names, {
-    TaxonName[idx] <- print_name(TaxonName[idx], ...)
+    TaxonName[idx] <- do.call(
+      print_name,
+      c(list(object = TaxonName[idx]), print_args)
+    )
     TaxonName
   })
   # Prefix

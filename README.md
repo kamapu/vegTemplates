@@ -39,8 +39,8 @@ package `taxlist` (called **Easplist**).
 library(taxlist)
 library(vegTemplates)
 
-check_list(Easplist, output_file = "ea-checklist", exclude = "family",
-    prefix = c(family = "# "), output = "html_document")
+checklist(Easplist, output_file = "ea-checklist", exclude = "family",
+    prefix = c(family = "# "), output = "html_document", alphabetic = TRUE)
 ```
 
 With the option `'exclude = "family"'` you prevent family names to be
